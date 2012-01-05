@@ -1,0 +1,506 @@
+/*
+ * This is a stylesheet for a demo presentation for impress.js
+ * 
+ * It is not meant to be a part of impress.js and is not required by impress.js.
+ * I expect that anyone creating a presentation for impress.js would create their own
+ * set of styles. */
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: "PT Sans", sans-serif;
+  min-height: 740px;
+  background: rgba(221, 235, 167, 0.3);
+  -webkit-font-smoothing: antialiased; }
+
+b, strong {
+  font-weight: bold; }
+
+i, em {
+  font-style: italic; }
+
+a {
+  color: #25160a;
+  text-decoration: none;
+  padding: 0 0.1em;
+  background: rgba(79, 105, 78, 0.3);
+  text-shadow: -1px -1px 2px rgba(100, 100, 100, 0.9);
+  border-radius: 0.2em;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  a:hover {
+    background: rgba(79, 105, 78, 0.5);
+    text-shadow: -1px -1px 2px rgba(100, 100, 100, 0.5); }
+
+/* COMMON STEP STYLES */
+.step {
+  width: 900px;
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 96px;
+  line-height: 1.5;
+  text-align: center;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s; }
+  .step:not(.active) {
+    opacity: 0.3; }
+
+/* fade out inactive slides */
+/* STEP SPECIFIC STYLES */
+/* hint on the first slide */
+.hint {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #eeeeee;
+  text-align: center;
+  font-size: 50px;
+  padding: 20px;
+  z-index: 100;
+  opacity: 0;
+  -webkit-transform: translateY(400px);
+  -moz-transform: translateY(400px);
+  -ms-transform: translateY(400px);
+  -o-transform: translateY(400px);
+  transform: translateY(400px);
+  -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+  -moz-transition: opacity 1s, -moz-transform 0.5s 1s;
+  -ms-transition: opacity 1s, -ms-transform 0.5s 1s;
+  -o-transition: opacity 1s, -o-transform 0.5s 1s;
+  transition: opacity 1s, transform 0.5s 1s; }
+
+.step-bored + .hint {
+  opacity: 1;
+  -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s;
+  -moz-transition: opacity 1s 5s, -moz-transform 0.5s;
+  -ms-transition: opacity 1s 5s, -ms-transform 0.5s;
+  -o-transition: opacity 1s 5s, -o-transform 0.5s;
+  transition: opacity 1s 5s, transform 0.5s;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px); }
+
+.love-win {
+  text-align: center; }
+  .love-win span.hate {
+    color: #8e3511;
+    font-family: "Handwriting - Dakota", serif;
+    font-size: 180px;
+    margin-left: -40px;
+    padding-right: 20px;
+    vertical-align: middle; }
+  .love-win h1 {
+    float: left;
+    font-size: 250px;
+    padding-left: 60px;
+    -webkit-transform: translateZ(50px);
+    -moz-transform: translateZ(50px);
+    -ms-transform: translateZ(50px);
+    -o-transform: translateZ(50px);
+    transform: translateZ(50px); }
+  .love-win img {
+    padding-top: 75px; }
+
+/* impress.js title */
+#title {
+  padding: 0;
+  color: #6a7d91;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 96px;
+  letter-spacing: -3px;
+  text-align: left; }
+  #title .try {
+    font-size: 64px;
+    position: absolute;
+    top: -0.5em;
+    left: 1.5em;
+    -webkit-transform: translateZ(20px);
+    -moz-transform: translateZ(20px);
+    -ms-transform: translateZ(20px);
+    -o-transform: translateZ(20px);
+    transform: translateZ(20px); }
+  #title .title-rails {
+    font-size: 288px;
+    font-weight: bold;
+    line-height: 250px;
+    color: #8e3511;
+    -webkit-transform: translateZ(50px);
+    -moz-transform: translateZ(50px);
+    -ms-transform: translateZ(50px);
+    -o-transform: translateZ(50px);
+    transform: translateZ(50px); }
+  #title .footnote {
+    font-size: 32px; }
+  #title .windows {
+    color: #4f694e;
+    display: inline-block;
+    position: absolute;
+    top: 110px;
+    left: 60%;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  #title .seriously {
+    color: black;
+    display: inline-block;
+    font-family: "Handwriting - Dakota";
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    -webkit-transform: rotate(-23deg);
+    -moz-transform: rotate(-23deg);
+    -ms-transform: rotate(-23deg);
+    -o-transform: rotate(-23deg);
+    transform: rotate(-23deg); }
+
+#its {
+  color: #8e3511;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 144px;
+  text-align: left; }
+  #its div {
+    padding-top: 40px; }
+  #its .float-left {
+    color: #6a7d91;
+    float: left;
+    height: 600px;
+    padding-top: 255px;
+    width: 300px; }
+  #its .past {
+    display: inline-block;
+    -webkit-transform: rotate(-23deg);
+    -moz-transform: rotate(-23deg);
+    -ms-transform: rotate(-23deg);
+    -o-transform: rotate(-23deg);
+    transform: rotate(-23deg); }
+  #its .future {
+    display: inline-block;
+    padding-top: 15px;
+    -webkit-transform: rotate(23deg);
+    -moz-transform: rotate(23deg);
+    -ms-transform: rotate(23deg);
+    -o-transform: rotate(23deg);
+    transform: rotate(23deg); }
+
+/* big thoughts */
+#big h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 96px;
+  -webkit-box-reflect: below -74px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.2))); }
+
+/* tiny ideas */
+#tiny {
+  color: #8e3511;
+  font-family: "Handwriting - Dakota", serif;
+  font-size: 150px;
+  width: 500px;
+  text-align: center; }
+
+#ing {
+  width: 500px;
+  color: #6a7d91;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 64px; }
+  #ing b {
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+
+b {
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+
+.active .positioning {
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+  -webkit-transition-delay: 1.5s;
+  -moz-transition-delay: 1.5s;
+  -ms-transition-delay: 1.5s;
+  -o-transition-delay: 1.5s;
+  transition-delay: 1.5s; }
+.active .rotating {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  -webkit-transition-delay: 1.75s;
+  -moz-transition-delay: 1.75s;
+  -ms-transition-delay: 1.75s;
+  -o-transition-delay: 1.75s;
+  transition-delay: 1.75s; }
+.active .scaling {
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition-delay: 2s;
+  -moz-transition-delay: 2s;
+  -ms-transition-delay: 2s;
+  -o-transition-delay: 2s;
+  transition-delay: 2s; }
+.active .scale-big {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: all 2s ease-in-out 0.5s;
+  -moz-transition: all 2s ease-in-out 0.5s;
+  -ms-transition: all 2s ease-in-out 0.5s;
+  -o-transition: all 2s ease-in-out 0.5s;
+  transition: all 2s ease-in-out 0.5s; }
+
+#rbinstaller {
+  width: 600px;
+  color: #6a7d91;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 64px; }
+
+/* imagination */
+#imagination {
+  width: 600px;
+  color: #6a7d91;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 96px; }
+
+/* use the source, Luke */
+#source {
+  width: 700px; }
+  #source q {
+    font-size: 60px; }
+
+.tagcloud span {
+  display: inline-block; }
+  .tagcloud span.ruby {
+    color: #8e3511;
+    -webkit-transform: scale(3) translateX(80px);
+    -moz-transform: scale(3) translateX(80px);
+    -ms-transform: scale(3) translateX(80px);
+    -o-transform: scale(3) translateX(80px);
+    transform: scale(3) translateX(80px); }
+  .tagcloud span.rails {
+    -webkit-transform: scale(2) translate(-95px, -60px);
+    -moz-transform: scale(2) translate(-95px, -60px);
+    -ms-transform: scale(2) translate(-95px, -60px);
+    -o-transform: scale(2) translate(-95px, -60px);
+    transform: scale(2) translate(-95px, -60px); }
+  .tagcloud span.bundler {
+    -webkit-transform: scale(1.2) translate(-50px, -105px);
+    -moz-transform: scale(1.2) translate(-50px, -105px);
+    -ms-transform: scale(1.2) translate(-50px, -105px);
+    -o-transform: scale(1.2) translate(-50px, -105px);
+    transform: scale(1.2) translate(-50px, -105px); }
+  .tagcloud span.git {
+    -webkit-transform: scale(1.6) translate(35px, -55px);
+    -moz-transform: scale(1.6) translate(35px, -55px);
+    -ms-transform: scale(1.6) translate(35px, -55px);
+    -o-transform: scale(1.6) translate(35px, -55px);
+    transform: scale(1.6) translate(35px, -55px); }
+  .tagcloud span.sqlite {
+    -webkit-transform: scale(0.8) translate(-50px, 0px);
+    -moz-transform: scale(0.8) translate(-90px, -50px);
+    -ms-transform: scale(0.8) translate(-90px, -50px);
+    -o-transform: scale(0.8) translate(-90px, -50px);
+    transform: scale(0.8) translate(-90px, -50px); }
+  .tagcloud span.tinytds {
+    -webkit-transform: scale(0.6) translate(300px, 80px);
+    -moz-transform: scale(0.6) translate(20px, 10px);
+    -ms-transform: scale(0.6) translate(20px, 10px);
+    -o-transform: scale(0.6) translate(20px, 10px);
+    transform: scale(0.6) translate(20px, 10px); }
+  .tagcloud span.devkit {
+    -webkit-transform: translate(80px, -80px);
+    -moz-transform: translate(80px, -80px);
+    -ms-transform: translate(80px, -80px);
+    -o-transform: translate(80px, -80px);
+    transform: translate(80px, -80px); }
+  .tagcloud span.sqlserver {
+    -webkit-transform: scale(1.5) translate(0px, 0px);
+    -moz-transform: translate(80px, -80px);
+    -ms-transform: translate(80px, -80px);
+    -o-transform: translate(80px, -80px);
+    transform: translate(80px, -80px); }
+
+/* it's in 3D */
+#its-in-3d span, #its-in-3d b {
+  display: inline-block;
+  -webkit-transform: translateZ(40px);
+  -moz-transform: translateZ(40px);
+  -ms-transform: translateZ(40px);
+  -o-transform: translateZ(40px);
+  transform: translateZ(40px);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+#its-in-3d .have {
+  -webkit-transform: translateZ(-40px);
+  -moz-transform: translateZ(-40px);
+  -ms-transform: translateZ(-40px);
+  -o-transform: translateZ(-40px);
+  transform: translateZ(-40px); }
+#its-in-3d .you {
+  -webkit-transform: translateZ(20px);
+  -moz-transform: translateZ(20px);
+  -ms-transform: translateZ(20px);
+  -o-transform: translateZ(20px);
+  transform: translateZ(20px); }
+#its-in-3d .noticed {
+  -webkit-transform: translateZ(-40px);
+  -moz-transform: translateZ(-40px);
+  -ms-transform: translateZ(-40px);
+  -o-transform: translateZ(-40px);
+  transform: translateZ(-40px); }
+#its-in-3d .its {
+  -webkit-transform: translateZ(60px);
+  -moz-transform: translateZ(60px);
+  -ms-transform: translateZ(60px);
+  -o-transform: translateZ(60px);
+  transform: translateZ(60px); }
+#its-in-3d .in {
+  -webkit-transform: translateZ(-10px);
+  -moz-transform: translateZ(-10px);
+  -ms-transform: translateZ(-10px);
+  -o-transform: translateZ(-10px);
+  transform: translateZ(-10px); }
+#its-in-3d .footnote {
+  font-size: 32px;
+  -webkit-transform: translateZ(-10px);
+  -moz-transform: translateZ(-10px);
+  -ms-transform: translateZ(-10px);
+  -o-transform: translateZ(-10px);
+  transform: translateZ(-10px); }
+#its-in-3d.active span, #its-in-3d.active b {
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  transform: translateZ(0px);
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -ms-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s; }
+
+.blue {
+  color: #6a7d91; }
+
+/* overview step */
+#overview {
+  z-index: -1; }
+
+/* on overview step everything is visible */
+#impress.step-overview .step {
+  opacity: 1; }
+
+/* SLIDE STEP STYLES
+ *
+ * inspired by: http://html5slides.googlecode.com/svn/trunk/styles.css
+ *
+ * ;) */
+.slide {
+  display: block;
+  width: 900px;
+  height: 700px;
+  padding: 40px 60px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #666666;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -1px; }
+  .slide q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+    margin-top: 100px; }
+    .slide q strong {
+      white-space: nowrap; }
+
+/* IMPRESS NOT SUPPORTED STYLES */
+.fallback-message {
+  font-family: sans-serif;
+  line-height: 1.3;
+  display: none;
+  width: 780px;
+  padding: 10px 10px 0;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 1px solid #e4c652;
+  background: #eedc94; }
+  .fallback-message p {
+    margin-bottom: 10px; }
+
+.impress-not-supported .step {
+  position: relative;
+  opacity: 1;
+  margin: 20px auto; }
+.impress-not-supported .fallback-message {
+  display: block; }

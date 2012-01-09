@@ -448,6 +448,9 @@ b {
 .blue {
   color: #6a7d91; }
 
+.red {
+  color: #8e3511; }
+
 /* overview step */
 #overview {
   z-index: -1; }

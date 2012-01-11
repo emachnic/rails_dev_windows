@@ -209,16 +209,16 @@ a {
   font-size: 144px;
   text-align: left; }
   #its div {
-    padding-top: 40px; }
+    padding-top: 80px; }
   #its .float-left {
     color: #6a7d91;
     float: left;
     height: 600px;
-    padding-top: 255px;
+    margin-top: 275px;
     width: 300px; }
   #its .past {
     display: inline-block;
-    -webkit-transform: rotate(-23deg);
+    -webkit-transform: rotate(-8deg);
     -moz-transform: rotate(-23deg);
     -ms-transform: rotate(-23deg);
     -o-transform: rotate(-23deg);
@@ -226,7 +226,7 @@ a {
   #its .future {
     display: inline-block;
     padding-top: 15px;
-    -webkit-transform: rotate(23deg);
+    -webkit-transform: rotate(8deg);
     -moz-transform: rotate(23deg);
     -ms-transform: rotate(23deg);
     -o-transform: rotate(23deg);

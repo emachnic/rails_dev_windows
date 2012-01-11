@@ -63,9 +63,7 @@ down all of these components and installing them separately is a nightmare.
 
 ## The Future
 
-(In the year 3000)...
-
-I'm just messing around. I don't know what's in store for the future right now,
+Honestly, I don't know what's in store for the future right now,
 but it has to be better than the past. We've come a long way and there's still 
 a lot of work to be done.
 
@@ -93,9 +91,9 @@ is something we probably worry about a few times a day.
 
 ### Pik
 
-Ruby Version Manager is another exceptional tool written by Wayne. It makes it easy
+Ruby Version Manager, or RVM, is another exceptional tool written by Wayne. It makes it easy
 to manage different versions of Ruby, provides sandboxed environments for different
-projects, and allows people to test software compatibility. Unfortunately it isn't
+projects, and allows people to test software compatibility. Unfortunately it doesn't run
 on Windows.
 
 The next best thing is a tool called Pik. Using Pik, you can install different
@@ -105,10 +103,10 @@ You can grab Pik from the Github page at github.com/vertiginous/pik.
 
 ### IDE or Text Editor
 
-You need a way to actually write your applications.
+Now you need a way to actually write your applications. No, we're not going to 
+fire up Visual Studio; it doesn't tend to play well with Rails
 When choosing an editor, you can either go with a Text Editor or an Integrated
-Development Environment (sorry .NET people, Visual Studio is pretty terrible for
-Rails development). All of the options I'll talk about run across platforms so you
+Development Environment. All of the options I'll talk about run across platforms so you
 can use them on Windows, Mac, or Linux.
 
 #### IDEs
@@ -216,8 +214,8 @@ and #RailsInstaller.
 
 I know this seems like a lot of information up front and I could probably go into much
 more detail but I'm trying to save your sanity. If you want to check out these
-slides again, you can go to emachnic.github.com/rails_dev_windows and you can also
-get the notes at github.com/emachnic/rails_dev_windows.
+slides again, you can go to emachnic.github.com/rails\_dev\_windows and you can also
+get the notes at github.com/emachnic/rails\_dev\_windows.
 
 The best thing you can do is get the software and start building something.
 You can read all of the books and watch all the screencasts you want but until

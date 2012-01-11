@@ -209,16 +209,16 @@ a {
   font-size: 144px;
   text-align: left; }
   #its div {
-    padding-top: 40px; }
+    padding-top: 80px; }
   #its .float-left {
     color: #6a7d91;
     float: left;
     height: 600px;
-    padding-top: 255px;
+    margin-top: 275px;
     width: 300px; }
   #its .past {
     display: inline-block;
-    -webkit-transform: rotate(-23deg);
+    -webkit-transform: rotate(-8deg);
     -moz-transform: rotate(-23deg);
     -ms-transform: rotate(-23deg);
     -o-transform: rotate(-23deg);
@@ -226,7 +226,7 @@ a {
   #its .future {
     display: inline-block;
     padding-top: 15px;
-    -webkit-transform: rotate(23deg);
+    -webkit-transform: rotate(8deg);
     -moz-transform: rotate(23deg);
     -ms-transform: rotate(23deg);
     -o-transform: rotate(23deg);
@@ -386,16 +386,16 @@ b {
 /* it's in 3D */
 #its-in-3d span, #its-in-3d b {
   display: inline-block;
-  -webkit-transform: translateZ(40px);
-  -moz-transform: translateZ(40px);
-  -ms-transform: translateZ(40px);
-  -o-transform: translateZ(40px);
-  transform: translateZ(40px);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s; }
+  -webkit-transform: translateZ(80px);
+  -moz-transform: translateZ(80px);
+  -ms-transform: translateZ(80px);
+  -o-transform: translateZ(80px);
+  transform: translateZ(80px);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
 #its-in-3d .have {
   -webkit-transform: translateZ(-40px);
   -moz-transform: translateZ(-40px);
@@ -415,11 +415,11 @@ b {
   -o-transform: translateZ(-40px);
   transform: translateZ(-40px); }
 #its-in-3d .its {
-  -webkit-transform: translateZ(60px);
-  -moz-transform: translateZ(60px);
-  -ms-transform: translateZ(60px);
-  -o-transform: translateZ(60px);
-  transform: translateZ(60px); }
+  -webkit-transform: translateZ(80px);
+  -moz-transform: translateZ(80px);
+  -ms-transform: translateZ(80px);
+  -o-transform: translateZ(80px);
+  transform: translateZ(80px); }
 #its-in-3d .in {
   -webkit-transform: translateZ(-10px);
   -moz-transform: translateZ(-10px);
@@ -447,6 +447,9 @@ b {
 
 .blue {
   color: #6a7d91; }
+
+.red {
+  color: #8e3511; }
 
 /* overview step */
 #overview {
